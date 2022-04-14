@@ -1,0 +1,120 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/ales-nesetril-ex_p4AaBxbs-unsplash.jpg);
+    background-attachment: local;
+    background-size: cover;
+}
+
+.caixa{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.div{
+    padding-bottom: 55px;
+}
+
+.lbl{
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    color: rgb(11, 204, 124);
+    font-family: poppins;
+    border: 1px solid rgb(11, 204, 124);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 100px;
+}
+
+
+
+.lblS{
+    position: relative;
+    text-align: center;
+    padding: 10px 20px;
+    color: rgb(11, 204, 124);
+    font-family: poppins;
+    border: 1px solid rgb(11, 204, 124);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 100px;
+}
+
+
+
+.ipt{
+    position: relative;
+    padding: 10px 15px;
+    border: 1px solid rgb(11, 204, 124);
+    border-radius: 100px;
+}
+
+input{
+    background-color: rgba(210, 05, 25, 0);
+    border: none;
+    color: rgb(11, 204, 124);
+    font-family: poppins;
+    padding: 5px;
+}
+
+.btn{
+    position: relative;
+    text-align: center;
+    left: 40%;
+    width: fit-content;
+    padding: 10px;
+    color: rgb(11, 204, 124);
+    background-color:rgba(210, 05, 25, 0);
+    font-family: poppins;
+    border: 1px solid rgb(11, 204, 124);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+.btn:hover{
+    box-shadow: 0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124),
+    0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124);
+}
+
+.btn:active{
+    box-shadow: none;
+    padding-bottom: 5px;
+}
+
+.btnPI{
+    padding: 15px;
+}
+
+.btnI{
+    position: relative;
+    text-align: center;
+    width: 300px;
+    padding: 10px;
+    color: rgb(11, 204, 124);
+    background-color: rgba(210, 05, 25, 0);
+    font-family: poppins;
+    font-size: 25px;
+    border: 1px solid rgb(11, 204, 124);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+.btnI:hover{
+    box-shadow: 0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124),
+    0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124);
+}
+
+.btnI:active{
+    box-shadow: none;
+    padding-bottom: 5px;
+}
