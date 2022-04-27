@@ -9,7 +9,6 @@
 </head>
 <body>
     <div class = "caixa2">
-        <div class = "subcaixa">
             <div class = "btnPI">
                 <button class = "btnI">200.00 MT</button>
             </div>
@@ -22,8 +21,7 @@
             <div class = "btnPI">
                 <button class = "btnI">1200.00 MT</button>
             </div>
-        </div>
-        <div class = "subcaixa">
+
             <div class = "btnPI">
                 <button class = "btnI">1500.00 MT</button>
             </div>
@@ -36,7 +34,6 @@
             <div class = "btnPI">
                 <button class = "btnI">OUTROS MONTANTES</button>
             </div>
-        </div>
     </div>
 </body>
 </html>
