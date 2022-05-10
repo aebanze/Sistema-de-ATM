@@ -1,3 +1,10 @@
+<?php 
+    session_start();
+    if(isset($_SESSION['dentro']) && $_SESSION['dentro'] == false){
+        
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-pt">
 <head>
@@ -23,5 +30,6 @@
             <a href="movimentos.php"><button class = "btnI">Movimentos</button></a>
         </div>
     </div>
+        
 </body>
 </html>

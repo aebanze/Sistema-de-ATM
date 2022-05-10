@@ -10,12 +10,12 @@
 
 </head>
 <body>
-   
+
     <div class = "caixa">
-        <form action="logIn.php" method="post">
+        <form action="processamento.php" method="post">
             <div class = "div">
                 <span class = "lbl"><label for="usuario">Usuario</label></span>
-                <span class = "ipt"><input type="text" name="usuario" id="usuario"></span>
+                <span class = "ipt "><input type="text" name="usuario" id="usuario"></span>
             </div>
             <div class = "div">
                 <span class = "lblS"><label for="senha">Senha</label></span>
