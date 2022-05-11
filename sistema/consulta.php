@@ -1,3 +1,18 @@
+<?php
+    #inicializando a session
+    session_start();
+
+    #verificando se usuario esta logado ou nao
+    if(!isset($_SESSION['dentro']) && $_SESSION["dentro"] !== true){
+        header("location: index.php");
+        exit;
+    }
+
+    $nome = $_SESSION['nome'];
+    $apelido = $_SESSION['apelido'];
+
+
+?>
 <!DOCTYPE html>
 <html lang="pt-pt">
 <head>
@@ -9,6 +24,10 @@
     
 </head>
 <body>
-    
+    <header>
+        <div class="lbln">
+            <span class="lblName"><label for=""><?php echo "$nome $apelido" ?></label></span>
+        </div>
+    </header>
 </body>
 </html>

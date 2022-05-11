@@ -122,3 +122,23 @@ input{
     margin-top: 20px;
     text-align: center;
 }
+ 
+.lbln{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    top: 10px;
+}
+
+.lblName{
+    position: relative;
+    text-align: center;
+    top: 20px;
+    padding: 10px 20px;
+    color: rgb(11, 204, 124);
+    font-family: poppins;
+    border: 1px solid rgb(11, 204, 124);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 100px;
+}
