@@ -29,5 +29,25 @@
             <span class="lblName"><label for=""><?php echo "$nome $apelido" ?></label></span>
         </div>
     </header>
+    <div class="tblconsuta">
+        <table id="tbl1" border="solid 1px radius">
+            <tr>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>

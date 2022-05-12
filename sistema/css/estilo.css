@@ -142,3 +142,17 @@ input{
     cursor: pointer;
     border-radius: 100px;
 }
+
+
+#tbl1{
+    position: relative;
+    left: 20%;
+    margin-top: 100px;
+    height: 250px;
+    width: 750px;
+    text-align: center;
+    color: rgb(11, 204, 124);
+    font-family: poppins;
+    text-transform: uppercase;
+    cursor: no-drop;
+}

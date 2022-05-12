@@ -7,6 +7,9 @@
         header("location: index.php");
         exit;
     }
+
+    $nome = $_SESSION['nome'];
+    $apelido = $_SESSION['apelido'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-pt">
@@ -18,6 +21,11 @@
     <link rel="stylesheet" href="./css/estilo.css">
 </head>
 <body>
+    <header>
+        <div class="lbln">
+            <span class="lblName"><label for=""><?php echo "$nome $apelido" ?></label></span>
+        </div>
+    </header>
     <div class = "caixa2">
             <div class = "btnPI">
                 <button class = "btnI">200.00 MT</button>
