@@ -26,5 +26,11 @@
             <span class="lblName"><label for=""><?php echo "$nome $apelido" ?></label></span>
         </div>
     </header>
+
+    <footer>
+        <div>
+            <a href="pagina_inicial.php"><button class="btnback">Voltar</button></a>
+        </div>
+    </footer>
 </body>
 </html>

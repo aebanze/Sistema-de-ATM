@@ -10,7 +10,9 @@
 
     $nome = $_SESSION['nome'];
     $apelido = $_SESSION['apelido'];
+
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-pt">
 <head>
@@ -21,6 +23,8 @@
     <link rel="stylesheet" href="./css/estilo.css">
 </head>
 <body>
+
+
     <header>
         <div class="lbln">
             <span class="lblName"><label for=""><?php echo "$nome $apelido" ?></label></span>
@@ -28,30 +32,39 @@
     </header>
     <div class = "caixa2">
             <div class = "btnPI">
-                <button class = "btnI">200.00 MT</button>
+                <button class = "btnI" value="200">200.00 MT</button>
             </div>
             <div class = "btnPI">
-                <button class = "btnI">500.00 Mt</button>
+                <button class = "btnI" value="500">500.00 Mt</button>
             </div>
             <div class = "btnPI">
-                <button class = "btnI">1000.00 MT</button>
+                <button class = "btnI" value="1000">1000.00 MT</button>
             </div>
             <div class = "btnPI">
-                <button class = "btnI">1200.00 MT</button>
+                <button class = "btnI" value="1200">1200.00 MT</button>
             </div>
 
             <div class = "btnPI">
-                <button class = "btnI">1500.00 MT</button>
+                <button class = "btnI" value="1500">1500.00 MT</button>
             </div>
             <div class = "btnPI">
-                <button class = "btnI">2000.00 MT</button>
+                <button class = "btnI" value="2000">2000.00 MT</button>
             </div>
             <div class = "btnPI">
-                <button class = "btnI">3000.00 MT</button>
+                <button class = "btnI" value="3000">3000.00 MT</button>
             </div>
             <div class = "btnPI">
                 <button class = "btnI">OUTROS MONTANTES</button>
             </div>
     </div>
+
+    <script>
+
+    </script>
+    <footer>
+        <div>
+            <a href="pagina_inicial.php"><button class="btnbackLv">Voltar</button></a>
+        </div>
+    </footer>
 </body>
 </html>

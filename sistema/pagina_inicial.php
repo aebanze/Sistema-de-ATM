@@ -41,6 +41,10 @@
             <a href="movimentos.php"><button class = "btnI">Movimentos</button></a>
         </div>
     </div>
-        
+    <footer>
+        <div>
+            <a href="logout.php"><button class="btnSair">Sair</button></a>
+        </div>
+    </footer>
 </body>
 </html>

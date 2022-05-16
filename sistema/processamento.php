@@ -4,6 +4,8 @@
     #incluindo arquivo de conexao a script
     require_once 'conexao.php';
 
+    $_SESSION['tentativa'];
+
     #recebendo dados do formulario
     $p_nome = $_POST['usuario'];
     $p_senha = $_POST['senha'];
@@ -30,7 +32,12 @@
         $_SESSION['apelido'] = $r2['cl_apelido'];
         header('location: pagina_inicial.php');
     } else {
-        header('location: index.php');
+        $_SESSION['tentativa']++;
+        if ($_SESSION['tentativa'] >= 3) {
+            header('location: bloqueado.php');
+        } else {
+            header('location: index.php');
+        }
     }
     
 ?>
