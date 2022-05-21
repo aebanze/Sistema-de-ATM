@@ -1,5 +1,4 @@
 <?php
-    session_start();
 
     #configurações da base de dados
     $servidor = 'localhost';

@@ -56,7 +56,7 @@
     </div>
     <footer>
         <div>
-            <a href="pagina_inicial.php"><button class="btnback">Voltar</button></a>
+            <a href="pagina_inicial.php"><button class="btnbackcon">Voltar</button></a>
         </div>
     </footer>
 </body>

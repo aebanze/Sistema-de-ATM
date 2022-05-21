@@ -35,7 +35,7 @@
             <a href="consulta.php"><button class = "btnI">Consultar Saldo</button></a>
         </div>
         <div class = "btnPI">
-            <a href="pagamentos.php"><button class = "btnI">Pagamentos</button></a>
+            <a href="servicos.php"><button class = "btnI">Serviços</button></a>
         </div>
         <div class = "btnPI">
             <a href="movimentos.php"><button class = "btnI">Movimentos</button></a>

@@ -4,8 +4,8 @@
     #incluindo arquivo de conexao a script
     require_once 'conexao.php';
 
-    $_SESSION['tentativa'];
-
+    $endereco = ipusuario();
+    
     #recebendo dados do formulario
     $p_nome = $_POST['usuario'];
     $p_senha = $_POST['senha'];
@@ -32,12 +32,23 @@
         $_SESSION['apelido'] = $r2['cl_apelido'];
         header('location: pagina_inicial.php');
     } else {
-        $_SESSION['tentativa']++;
-        if ($_SESSION['tentativa'] >= 3) {
-            header('location: bloqueado.php');
+        $query = "INSERT INTO `tentativas_login`(`endereco_ip`) VALUES ('$endereco')";
+        $q = $con->prepare($query);
+        $q->execute();
+        header('location: index.php');
+    }
+
+    
+
+    function ipusuario(){
+        if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+            $ip = $_SERVER['HTTP_CLIENT_IP'];
+        } else if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+            $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
         } else {
-            header('location: index.php');
+            $ip = $_SERVER['REMOTE_ADDR'];
         }
+        return $ip;
     }
     
 ?>

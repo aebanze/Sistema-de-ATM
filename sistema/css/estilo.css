@@ -50,6 +50,7 @@ body{
 
 .ipt{
     position: relative;
+    width: 200px;
     padding: 10px 15px;
     border: 1px solid rgb(11, 204, 124);
     border-radius: 100px;
@@ -119,10 +120,16 @@ input{
     padding-bottom: 5px;
 }
 .caixa2{
-    margin-top: 20px;
+    position: relative;
+    top: 100px;
+    left: 23%;
     text-align: center;
 }
  
+.subcaixa{
+    float: left;
+}
+
 .lbln{
     position: relative;
     width: fit-content;
@@ -162,7 +169,7 @@ input{
     position: relative;
     text-align: center;
     width: 200px;
-    padding-bottom: -15px;
+    top: 480px;
     float: right;
     color: rgb(11, 204, 124);
     background-color: rgba(210, 05, 25, 0);
@@ -189,7 +196,7 @@ input{
     position: relative;
     text-align: center;
     width: 200px;
-    top: 450px;
+    top: 510px;
     float: right;
     color: rgb(11, 204, 124);
     background-color: rgba(210, 05, 25, 0);
@@ -208,6 +215,303 @@ input{
 }
 
 .btnSair:active{
+    box-shadow: none;
+    padding-bottom: 5px;
+}
+
+.caixaL{
+    position: relative;
+    top: 150px;
+    left: 25%;
+}
+
+.btnS{
+    position: relative;
+    text-align: center;
+    width: 300px;
+    padding: 10px;
+    color: rgb(11, 204, 124);
+    background-color: rgba(210, 05, 25, 0);
+    font-family: poppins;
+    font-size: 25px;
+    border: 1px solid rgb(11, 204, 124);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+.btnS:hover{
+    box-shadow: 0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124),
+    0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124);
+}
+
+.btnS:active{
+    box-shadow: none;
+    padding-bottom: 5px;
+}
+
+.btnback{
+    position: relative;
+    text-align: center;
+    width: 200px;
+    top: 400px;
+    float: right;
+    color: rgb(11, 204, 124);
+    background-color: rgba(210, 05, 25, 0);
+    font-family: poppins;
+    font-size: 25px;
+    border: 1px solid rgb(11, 204, 124);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+.btnback:hover{
+    box-shadow: 0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124),
+    0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124);
+}
+
+.btnback:active{
+    box-shadow: none;
+    padding-bottom: 5px;
+}
+
+.btnbackcon{
+    position: relative;
+    text-align: center;
+    width: 200px;
+    top: 310px;
+    float: right;
+    color: rgb(11, 204, 124);
+    background-color: rgba(210, 05, 25, 0);
+    font-family: poppins;
+    font-size: 25px;
+    border: 1px solid rgb(11, 204, 124);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+.btnbackcon:hover{
+    box-shadow: 0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124),
+    0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124);
+}
+
+.btnbackcon:active{
+    box-shadow: none;
+    padding-bottom: 5px;
+}
+
+#operadora {
+    text-align: center;
+    width: 200px;
+    left: 200px;
+    color: rgb(11, 204, 124);
+    background-color: rgba(210, 05, 25, 0);
+    font-family: poppins;
+    font-size: 25px;
+    border: 1px solid rgb(11, 204, 124);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+p{
+    text-align: center;
+    color: rgb(11, 204, 124);
+    font-family: poppins;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.btnbackCR{
+    position: relative;
+    text-align: center;
+    width: 200px;
+    top: 510px;
+    float: right;
+    color: rgb(11, 204, 124);
+    background-color: rgba(210, 05, 25, 0);
+    font-family: poppins;
+    font-size: 25px;
+    border: 1px solid rgb(11, 204, 124);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+.btnbackCR:hover{
+    box-shadow: 0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124),
+    0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124);
+}
+
+.btnbackCR:active{
+    box-shadow: none;
+    padding-bottom: 5px;
+}
+
+.btn2{
+    position: relative;
+    text-align: center;
+    left: 39%;
+    width: 200px;
+    margin-top: 20px;
+    color: rgb(11, 204, 124);
+    background-color:rgba(210, 05, 25, 0);
+    font-family: poppins;
+    font-size: 25px;
+    border: 1px solid rgb(11, 204, 124);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+.btn2:hover{
+    box-shadow: 0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124),
+    0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124);
+}
+
+.btn2:active{
+    box-shadow: none;
+    padding-bottom: 5px;
+}
+
+.btnPin{
+    position: relative;
+    text-align: center;
+    width: 300px;
+    left: 37%;
+    top: 200px;
+    padding: 10px;
+    color: rgb(11, 204, 124);
+    background-color: rgba(210, 05, 25, 0);
+    font-family: poppins;
+    font-size: 25px;
+    border: 1px solid rgb(11, 204, 124);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+.btnPin:hover{
+    box-shadow: 0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124),
+    0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124);
+}
+
+.btnPin:active{
+    box-shadow: none;
+    padding-bottom: 5px;
+}
+
+.backCr{
+    position: relative;
+    text-align: center;
+    float: right;
+    top: 500px;
+    width: 200px;
+    color: rgb(11, 204, 124);
+    background-color:rgba(210, 05, 25, 0);
+    font-family: poppins;
+    font-size: 25px;
+    border: 1px solid rgb(11, 204, 124);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+.backCr:hover{
+    box-shadow: 0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124),
+    0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124);
+}
+
+.backCr:active{
+    box-shadow: none;
+    padding-bottom: 5px;
+}
+
+.btnCr{
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    width: 200px;
+    color: rgb(11, 204, 124);
+    background-color:rgba(210, 05, 25, 0);
+    font-family: poppins;
+    font-size: 25px;
+    border: 1px solid rgb(11, 204, 124);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+.btnCr:hover{
+    box-shadow: 0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124),
+    0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124);
+}
+
+.btnCr:active{
+    box-shadow: none;
+    padding-bottom: 5px;
+}
+
+.btnTroca{
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    width: 200px;
+    color: rgb(11, 204, 124);
+    background-color:rgba(210, 05, 25, 0);
+    font-family: poppins;
+    font-size: 25px;
+    border: 1px solid rgb(11, 204, 124);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+.btnTroca:hover{
+    box-shadow: 0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124),
+    0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124);
+}
+
+.btnTroca:active{
+    box-shadow: none;
+    padding-bottom: 5px;
+}
+
+.bck{
+    position: relative;
+    text-align: center;
+    float: right;
+    top: 500px;
+    width: 200px;
+    color: rgb(11, 204, 124);
+    background-color:rgba(210, 05, 25, 0);
+    font-family: poppins;
+    font-size: 25px;
+    border: 1px solid rgb(11, 204, 124);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+.bck:hover{
+    box-shadow: 0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124),
+    0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124);
+}
+
+.bck:active{
     box-shadow: none;
     padding-bottom: 5px;
 }

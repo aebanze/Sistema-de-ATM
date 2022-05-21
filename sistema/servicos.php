@@ -27,6 +27,14 @@
         </div>
     </header>
 
+    <div class="caixaL">
+        <span><a href="credelec.php"><button class = "btnS">Credelec</button></a></span>
+        <span><a href="credito.php"><button class = "btnS">Credito</button></a></span>
+    </div>
+    <div class="caixaR">
+        <span><a href="pin.php"><button class="btnPin">Alterar PIN</button></a></span>
+    </div>
+  
     <footer>
         <div>
             <a href="pagina_inicial.php"><button class="btnback">Voltar</button></a>

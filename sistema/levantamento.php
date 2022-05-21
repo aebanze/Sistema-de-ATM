@@ -31,6 +31,7 @@
         </div>
     </header>
     <div class = "caixa2">
+        <span class="subcaixa">
             <div class = "btnPI">
                 <button class = "btnI" value="200">200.00 MT</button>
             </div>
@@ -43,7 +44,8 @@
             <div class = "btnPI">
                 <button class = "btnI" value="1200">1200.00 MT</button>
             </div>
-
+        </span>
+        <span class="subcaixa">
             <div class = "btnPI">
                 <button class = "btnI" value="1500">1500.00 MT</button>
             </div>
@@ -56,6 +58,7 @@
             <div class = "btnPI">
                 <button class = "btnI">OUTROS MONTANTES</button>
             </div>
+        </span>
     </div>
 
     <script>
