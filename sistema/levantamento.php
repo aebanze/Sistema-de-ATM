@@ -9,7 +9,7 @@
     }
 
     $nome = $_SESSION['nome'];
-    $apelido = $_SESSION['apelido'];
+
 
 ?>
 
@@ -27,47 +27,21 @@
 
     <header>
         <div class="lbln">
-            <span class="lblName"><label for=""><?php echo "$nome $apelido" ?></label></span>
+            <span class="lblName"><label for=""><?php echo "$nome" ?></label></span>
         </div>
     </header>
-    <div class = "caixa2">
-        <span class="subcaixa">
-            <div class = "btnPI">
-                <button class = "btnI" value="200">200.00 MT</button>
-            </div>
-            <div class = "btnPI">
-                <button class = "btnI" value="500">500.00 Mt</button>
-            </div>
-            <div class = "btnPI">
-                <button class = "btnI" value="1000">1000.00 MT</button>
-            </div>
-            <div class = "btnPI">
-                <button class = "btnI" value="1200">1200.00 MT</button>
-            </div>
-        </span>
-        <span class="subcaixa">
-            <div class = "btnPI">
-                <button class = "btnI" value="1500">1500.00 MT</button>
-            </div>
-            <div class = "btnPI">
-                <button class = "btnI" value="2000">2000.00 MT</button>
-            </div>
-            <div class = "btnPI">
-                <button class = "btnI" value="3000">3000.00 MT</button>
-            </div>
-            <div class = "btnPI">
-                <button class = "btnI">OUTROS MONTANTES</button>
-            </div>
-        </span>
+    <div class = "caixaL">
+        <form action="levantar.php" method="POST">
+            <p>Informe o valor a levantar</p>
+            <div><input class="ipt" type="number" name="quantia" id="quantia" placeholder="min = 10"></div>
+        </form>
     </div>
-
-    <script>
-
-    </script>
+        
     <footer>
         <div>
             <a href="pagina_inicial.php"><button class="btnbackLv">Voltar</button></a>
         </div>
+        
     </footer>
 </body>
 </html>

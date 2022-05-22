@@ -11,7 +11,6 @@
 
     
      $nome = $_SESSION['nome'];
-     $apelido = $_SESSION['apelido'];
 
 ?>
 
@@ -27,12 +26,12 @@
 <body>
     <header>
         <div class="lbln">
-            <span class="lblName"><label for=""><?php echo "$nome $apelido" ?></label></span>
+            <span class="lblName"><label for=""><?php echo "$nome" ?></label></span>
         </div>
     </header>
 
     <div class="caixa">
-        <form action="" method="POST">
+        <form action="energRec.php" method="POST">
             <div>
                 <p>Introduza o Nº do Contador</p>
                 <span><input class="ipt" type="text" name="contador" id="contador"></span>

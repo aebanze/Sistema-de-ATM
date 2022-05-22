@@ -9,7 +9,6 @@
     }
 
     $nome = $_SESSION['nome'];
-    $apelido = $_SESSION['apelido'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-pt">
@@ -23,7 +22,7 @@
 <body>
     <header>
         <div class="lbln">
-            <span class="lblName"><label for=""><?php echo "$nome $apelido" ?></label></span>
+            <span class="lblName"><label for=""><?php echo "$nome" ?></label></span>
         </div>
     </header>
 

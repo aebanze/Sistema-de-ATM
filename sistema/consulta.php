@@ -12,12 +12,12 @@
     }
     //pegar o nome e apelido do usuario para mostrar na tela
     $nome = $_SESSION['nome'];
-    $apelido = $_SESSION['apelido'];
     $id = $_SESSION['id'];
 
 ?>
 
 <?php
+    //consulta de saldo do usuario na BD
     $query = ("select saldo from conta where id_cliente = '$id'");
     $resgisto = $con->query($query, PDO::FETCH_ASSOC);
     $res = $resgisto->fetch();
@@ -37,7 +37,7 @@
 <body>
     <header>
         <div class="lbln">
-            <span class="lblName"><label for=""><?php echo "$nome $apelido" ?></label></span>
+            <span class="lblName"><label for=""><?php echo "$nome" ?></label></span>
         </div>
     </header>
     <div class="tblconsuta">

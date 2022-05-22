@@ -322,6 +322,7 @@ input{
 
 p{
     text-align: center;
+    width: 80%;
     color: rgb(11, 204, 124);
     font-family: poppins;
     font-size: 20px;
@@ -514,4 +515,62 @@ p{
 .bck:active{
     box-shadow: none;
     padding-bottom: 5px;
+}
+
+.rec{
+    position: relative;
+    text-align: center;
+    top: 200px;
+    width: 90%;
+    color: rgb(11, 204, 124);
+    background-color:rgba(210, 05, 25, 0);
+    font-family: poppins;
+    font-size: 25px;
+    border: 1px solid rgb(11, 204, 124);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+.bckRec{
+    position: relative;
+    text-align: center;
+    float: right;
+    top: 400px;
+    width: 200px;
+    color: rgb(11, 204, 124);
+    background-color:rgba(210, 05, 25, 0);
+    font-family: poppins;
+    font-size: 25px;
+    border: 1px solid rgb(11, 204, 124);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+.bckRec:hover{
+    box-shadow: 0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124),
+    0 2px 10px 0 rgb(11, 204, 124) inset, 0 2px 10px 0 rgb(11, 204, 124);
+}
+
+.bckRec:active{
+    box-shadow: none;
+    padding-bottom: 5px;
+}
+
+.caixaL{
+    position: relative;
+    top: 150px;
+    left: 25%;
+}
+
+#erro{
+    padding-top: 10px;
+    text-align: center;
+    color: rgb(11, 204, 124);
+    background-color:rgba(210, 05, 25, 0);
+    font-family: poppins;
+    font-size: 25px;
 }
