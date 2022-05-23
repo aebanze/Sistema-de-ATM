@@ -4,12 +4,8 @@
 
     $id = $_SESSION['id'];
     $nome = $_SESSION['nome'];
+    $quantia = $_SESSION['quantiaLv'];
 
-    $query = ("select saldo from conta where id_cliente = '$id'");
-    $resgisto = $con->query($query, PDO::FETCH_ASSOC);
-    $res = $resgisto->fetch();
-
-    $saldo = $res['saldo'];
 ?>
 <?php  
 include ('./fpdf/fpdf.php');
@@ -45,12 +41,12 @@ function Footer()
 }
  $pdf = new Relatorio();
  $pdf->AddPage('P', 'A5',);
- $pdf->SetTitle('Consulta Saldo');
+ $pdf->SetTitle('CLevantamento');
  $pdf->SetFont('Arial', 'B', 16);
+ $pdf->Cell(80, 15, 'Levantamento', 0, 1, 'L', false);
  $pdf->Cell(80, 15, 'data: ' . date("d") . "-" . date("m") . "-" . date("y"));
  $pdf->Ln(20);
- $pdf->Cell(40,30, 'cliente: ' . $nome, 0, 1, 'L', false);
- $pdf->Cell(40, 30, 'Saldo Disponivel: ' . $saldo, 0, 1, 'L', false);
+ $pdf->Cell(80, 15, 'Quantia :      ' . $quantia, 0, 1, 'L', false);
 
- $pdf->Output('I', 'Saldo');
+ $pdf->Output('I', 'Levantamento');
 ?>

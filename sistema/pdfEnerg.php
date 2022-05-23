@@ -4,12 +4,10 @@
 
     $id = $_SESSION['id'];
     $nome = $_SESSION['nome'];
+    $valor = $_SESSION['credelec'];
+    $contador = $_SESSION['contador'];
+    $codigo = $_SESSION['codigoCred'];
 
-    $query = ("select saldo from conta where id_cliente = '$id'");
-    $resgisto = $con->query($query, PDO::FETCH_ASSOC);
-    $res = $resgisto->fetch();
-
-    $saldo = $res['saldo'];
 ?>
 <?php  
 include ('./fpdf/fpdf.php');
@@ -45,12 +43,14 @@ function Footer()
 }
  $pdf = new Relatorio();
  $pdf->AddPage('P', 'A5',);
- $pdf->SetTitle('Consulta Saldo');
+ $pdf->SetTitle('Compra de Credelec');
  $pdf->SetFont('Arial', 'B', 16);
+ $pdf->Cell(80, 15, 'Compra de Credelec', 0, 1, 'L', false);
  $pdf->Cell(80, 15, 'data: ' . date("d") . "-" . date("m") . "-" . date("y"));
  $pdf->Ln(20);
- $pdf->Cell(40,30, 'cliente: ' . $nome, 0, 1, 'L', false);
- $pdf->Cell(40, 30, 'Saldo Disponivel: ' . $saldo, 0, 1, 'L', false);
+ $pdf->Cell(80, 15,  'Valor :'. "        " . $valor . ".00MT", 0, 1, 'L', false);
+ $pdf->Cell(80, 15, 'Contador: ' . '       ' . $contador, 0, 1, 'L', false);
+ $pdf->Cell(40,30, 'Codigo: ' . $codigo, 0, 1, 'L', false);
 
- $pdf->Output('I', 'Saldo');
+ $pdf->Output('I', 'Credito');
 ?>

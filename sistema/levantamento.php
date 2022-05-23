@@ -32,8 +32,12 @@
     </header>
     <div class = "caixaL">
         <form action="levantar.php" method="POST">
-            <p>Informe o valor a levantar</p>
+            <div id="info">
+                Informe o valor que pretende levantar
+            </div>
             <div><input class="ipt" type="number" name="quantia" id="quantia" placeholder="min = 10"></div>
+
+            <div><button type="submit" id="btnLv">Levantar</button></div>
         </form>
     </div>
         

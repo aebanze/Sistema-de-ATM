@@ -54,6 +54,9 @@
             </tr>
         </table>
     </div>
+    <div>
+        <a href="pdfSaldo.php"><button id="btnPrintSal">Imprimir</button></a>
+    </div>
     <footer>
         <div>
             <a href="pagina_inicial.php"><button class="btnbackcon">Voltar</button></a>

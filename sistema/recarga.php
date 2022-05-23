@@ -24,45 +24,33 @@
     
 
     //pegando dados do formulario
-    $numero = $_POST['numero'];
+    $operadora = $_POST['operadora'];
     $quantia = $_POST['montante'];
 
-    $total = $saldo - ($quantia + 10);
-    $recarga = recargaPrint($numero, $quantia, $custo);
-    $sql = "UPDATE `conta` SET `saldo`='$total' WHERE id_cliente = '$id'";
-    $inserir = $con->prepare($sql);
-    $inserir->execute();
-    $custo = ($quantia + 10);
+    if ($saldo > ($quantia + 10)){
+        $date = date("d") . "-" . date("m") . "-" . date("y");
+        $total = $saldo - ($quantia + 10);
+        $recarga = recargaGen();
+        $_SESSION['credito'] = $quantia;
+        $_SESSION['recarga'] = $recarga;
+        $_SESSION['operadora'] = $operadora;
+        
+        $sql = "UPDATE `conta` SET `saldo`='$total' WHERE id_cliente = '$id'";
+        $inserir = $con->prepare($sql);
+        if($inserir->execute()){
+            $info = "Efectuou com sucesso a compra da recarga de $quantia .00Mt 
+                 $operadora. </br> Codigo da recarga: $recarga";
+        }
 
+        $mov = $con->query("INSERT INTO `movimentos`(`actividade`, `descricao`, `custo`, `data`) VALUES ('Credito','Compra de Credito $operadora','$quantia','$date') where `cliente_id` = '$id'", PDO::FETCH_ASSOC);
+        $mov->execute();
+        
+    } else{
+        $info = "Saldo insuficiente para efectuar a operação";
+    }
 ?>
 
 <?php
-
-    function verificarNr($nr){
-    
-        $numero = str_split($nr);
-        $tamanho = count($numero);
-
-        if ($tamanho == 9) {
-            if ($numero[0] == 8) {
-                if ($numero[1] == 4 || $numero[1] == 5) {
-                    $info = "VODACOM";
-                } else if ($numero[1] == 2 || $numero[1] == 3){
-                    $info = "TMCEL";
-                } else if ($numero[1] == 6 || $numero[1] == 7) {
-                    $info = "MOVITEL";
-                } else {
-                    $info = "Nº inválido";
-                }
-                
-            } else {
-                $info = "Nº inválido";
-            }
-        } else {
-            $info = "Nº inválido";
-        }
-        return $info;
-}
 
     function recargaGen (){
         $rec1 = rand(0, 9);
@@ -74,31 +62,6 @@
         
         return $codigo;
 }
-
-    function recargaPrint($nr, $valor, $custo){
-        $info = "";
-        if (!empty($nr)) {
-            if (!empty($valor)) {
-                $operadora = verificarNr($nr);
-                if ($operadora !== "Nº inválido") {
-                    $codigoRec = recargaGen();
-                    
-                    $info = "Efectuada a compra da recarga $operadora no valor de $valor .00 MT
-                    para o numero $nr com sucesso. custo de $custo .00 MT </br> codigo da recarga: $codigoRec";
-                } else {
-                    $info = "Nº inválido";
-                }
-                
-                
-            } else {
-                $info = "Informe o valor da recarga sff";
-            }
-            
-        } else {
-            $info = "Introduza um numero sff";
-        }
-        return $info;
-    }
 ?>
 
 <!DOCTYPE html>
@@ -119,8 +82,12 @@
 
     <div class="rec">
 
-            <?php echo "$recarga"; ?>
+            <?php echo "$$info"; ?>
 
+    </div>
+
+    <div >
+        <a href="pdfCredito.php"><button id="btnPrintCred">Imprimir</button></a>
     </div>
 
 

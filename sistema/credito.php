@@ -12,11 +12,6 @@
     $nome = $_SESSION['nome'];
 
 
-    //pegando dados do formulario
-    $numero = $_POST['numero'] ?? NULL;
-    $quantia = $_POST['montante'] ?? NULL;
-
-
 
 ?>
 
@@ -38,9 +33,13 @@
 
     <div class="caixa">
         <form action="recarga.php" method="POST">
-            <p>Introduza o numero de Celular</p>
+            
             <div>
-                <input class="ipt" type="text" name="numero" id="numero" required>
+               <select name="operadora" id="operadora">
+                   <option value="Vodacom">VODACOM</option>
+                   <option value="TMcel">TMCEL</option>
+                   <option value="Movitel">MOVITEL</option>
+               </select>
             </div>
             
             <div>
@@ -48,7 +47,7 @@
                 <input class="ipt" type="number" name="montante" id="montante" placeholder="min = 10">
             </div>
             <div  style="margin-top: 20px;">
-                <button type="submit" class = "btn2">Comprar</button>
+                <button type="submit" class = "btn2" name="submit">Comprar</button>
             </div>
         </form>
     </div>

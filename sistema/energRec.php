@@ -19,6 +19,8 @@
 
     $contador = $_POST['contador'];
     $valor = $_POST['valor'];
+    $_SESSION['credelec'] = $valor;
+    $_SESSION['contador'] = $contador;
 
     $sql = "SELECT `contador_nr` FROM `conta_credelec` WHERE `contador_nr` = '$contador'";
     $query = $con->prepare($sql);
@@ -33,15 +35,21 @@
 
         $saldoDis = $row['saldo'];
 
-        $saldoTotal = $saldoDis - ($valor + 10);
-        $custo = $valor + 10;
-
-        $act = "UPDATE `conta` SET `saldo`='$saldoTotal' WHERE `id_cliente` = '$id'";
-        $inserir = $con->prepare($act);
-        if($inserir->execute()){
-            $codigo = codGen();
-            $ret = "Efectuada a compra de credelec com sucesso no valor de 
-                    $valor .00Mt. </br> Custo $custo .00MT </br> codigo: $codigo";
+        if($saldoDis > ($valor + 10)){
+            $saldoTotal = $saldoDis - ($valor + 10);
+            $date = date("d") . "-" . date("m") . "-" . date("y");
+            $act = "UPDATE `conta` SET `saldo`='$saldoTotal' WHERE `id_cliente` = '$id'";
+            $inserir = $con->prepare($act);
+            if($inserir->execute()){
+                $codigo = codGen();
+                $_SESSION['codigoCred'] = $codigo;
+                $ret = "Efectuada a compra de credelec com sucesso no valor de 
+                        $valor .00Mt. </br>  codigo: $codigo";
+                $mov = $con->query("INSERT INTO `movimentos`(`actividade`, `descricao`, `custo`, `data`) VALUES ('Credelec','Compra de Credelec para contador $contador','$valor','$date') where `cliente_id` = '$id'", PDO::FETCH_ASSOC);
+                $mov->execute();
+            }
+        } else {
+            $ret = "Saldo insuficiente para efectuar a operação";
         }
     } else {
         $ret = "contador nao existe na base de dados";
@@ -72,8 +80,24 @@
 
 </head>
 <body>
+
+    <header>
+        <div class="lbln">
+            <span class="lblName"><label for=""><?php echo "$nome" ?></label></span>
+        </div>
+    </header>
+
     <div class="rec">
         <?php echo "$ret"; ?>
     </div>
+
+    <div>
+        <a href="pdfEnerg.php"><button id="printEnerg">Imprimir</button></a>
+    </div>
+    <footer>
+        <div>
+            <a href="credelec.php"><button id="bckEnerg">Voltar</button></a>
+        </div>
+    </footer>
 </body>
 </html>
